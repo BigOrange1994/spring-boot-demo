@@ -1,0 +1,36 @@
+#线上环境
+server:
+  port: 17006
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  application:
+    name: spring-boot-demo
+
+  # 数据源配置
+  datasource:
+    # onlyread2
+    onlyread2:
+      url: jdbc:mysql://rr-2zeaktc39zth5i60p962.mysql.rds.aliyuncs.com:3306/prism1?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+      username: jindi
+      password: jindichangsheng
+      driverClassName: com.mysql.jdbc.Driver
+      initialSize: 1
+      maxActive: 500
+      maxWait: 500000
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 300000
+      minEvictableIdleTimeMillis: 1800000
+      validationQuery: SELECT 1 FROM DUAL
+      testOnBorrow: true
+      testOnReturn: true
+      filters: stat,wall,slf4j
+      logSlowSql: true
+      poolPreparedStatements:  true
+      maxPoolPreparedStatementPerConnectionSize:  500

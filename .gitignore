@@ -1,0 +1,13 @@
+#project
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+*.mvn
+#log
+logs/
+
